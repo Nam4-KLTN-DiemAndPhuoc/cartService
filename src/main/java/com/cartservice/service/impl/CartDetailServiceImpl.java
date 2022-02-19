@@ -82,7 +82,7 @@ public class CartDetailServiceImpl implements  CartDetailService {
     return list;
     }
 
-<<<<<<< HEAD
+
     public List<CartDetail_Product> getFallback2(Long id, RuntimeException runtimeException) {
         List<CartDetail_Product> list = new ArrayList<CartDetail_Product>();
         List<CartDetail> listCartDetails=repository.findByCartId(id);
@@ -93,7 +93,7 @@ public class CartDetailServiceImpl implements  CartDetailService {
         }
         return list;
     }
-=======
+
     @Override
     public String deleteCartDetailByCartId(Long id) {
         List<CartDetail> listCartDetails=repository.findByCartId(id);
@@ -102,5 +102,4 @@ public class CartDetailServiceImpl implements  CartDetailService {
     }
 
 
->>>>>>> 9f8c661398fc91df83fe4daf4812c26bdcf877f8
 }
