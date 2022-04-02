@@ -25,9 +25,9 @@ public class CartDetailController {
         return cartDetailService.updateCartDetailProduct(cartDetail);
     }
 
-    @PostMapping("/delete")
-    public String deleteByIds(@RequestBody List<Long> ids){
-        return cartDetailService.deleteCartDetailProduct(ids);
+    @PostMapping("/delete/{id}")
+    public Long deleteByIds(@PathVariable Long id){
+        return cartDetailService.deleteCartDetailProduct(id);
     }
 
     @GetMapping("/{id}")

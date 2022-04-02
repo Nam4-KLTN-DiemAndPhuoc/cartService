@@ -9,6 +9,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class CartDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

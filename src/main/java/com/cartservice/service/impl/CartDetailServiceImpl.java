@@ -28,6 +28,8 @@ public class CartDetailServiceImpl implements  CartDetailService {
     @Override
     public CartDetail_Product addCartDetailProduct(CartDetail cartDetail) {
 
+        System.out.println(cartDetail.toString());
+
         List<CartDetail> list= repository.findByCartId(cartDetail.getCart().getId());
 
         for(int i =0; i< list.size();i++ ){
@@ -52,9 +54,9 @@ public class CartDetailServiceImpl implements  CartDetailService {
 
 
     @Override
-    public String deleteCartDetailProduct(List<Long> ids) {
-         repository.deleteAllById(ids);
-         return "Xóa thành công";
+    public Long deleteCartDetailProduct(Long id) {
+         repository.deleteById(id);
+         return id;
     }
 
     @Retry(name = "basic",fallbackMethod = "getFallback")
