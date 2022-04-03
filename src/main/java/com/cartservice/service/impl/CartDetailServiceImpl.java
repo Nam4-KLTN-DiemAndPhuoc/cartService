@@ -33,7 +33,7 @@ public class CartDetailServiceImpl implements  CartDetailService {
         List<CartDetail> list= repository.findByCartId(cartDetail.getCart().getId());
 
         for(int i =0; i< list.size();i++ ){
-            if(list.get(i).getProductId()==cartDetail.getProductId()){
+            if(list.get(i).getProductId()==cartDetail.getProductId() && list.get(i).getAttributeId()== cartDetail.getAttributeId() ){
                 list.get(i).setAmount(list.get(i).getAmount()+cartDetail.getAmount());
                 CartDetail  crtDetail= repository.save(list.get(i));
                 Product product=restTemplate.getForObject(Constants.PRODUCT+"/"+crtDetail.getProductId(), Product.class);
