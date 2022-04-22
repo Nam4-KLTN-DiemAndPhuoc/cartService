@@ -28,7 +28,7 @@ public class CartDetailServiceImpl implements  CartDetailService {
     @Override
     public CartDetail_Product addCartDetailProduct(CartDetail cartDetail) {
 
-        System.out.println(cartDetail.toString());
+        System.out.println("AAAAAAAAAAAAA"+cartDetail);
 
         List<CartDetail> list= repository.findByCartId(cartDetail.getCart().getId());
 

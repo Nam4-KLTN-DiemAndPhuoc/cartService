@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/cart-detail")
+@CrossOrigin
 public class CartDetailController {
 
     @Autowired
