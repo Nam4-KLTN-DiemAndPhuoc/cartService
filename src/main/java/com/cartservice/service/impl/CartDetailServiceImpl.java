@@ -97,10 +97,10 @@ public class CartDetailServiceImpl implements  CartDetailService {
     }
 
     @Override
-    public String deleteCartDetailByCartId(Long id) {
+    public Long deleteCartDetailByCartId(Long id) {
         List<CartDetail> listCartDetails=repository.findByCartId(id);
         repository.deleteAll(listCartDetails);
-        return "Xóa thành công";
+        return id;
     }
 
 

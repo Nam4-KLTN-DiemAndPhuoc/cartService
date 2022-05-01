@@ -11,5 +11,5 @@ public interface CartDetailService {
     Long deleteCartDetailProduct(Long id);
     CartDetail_Product findById(Long id);
     List<CartDetail_Product> findByCartId(Long id);
-    String deleteCartDetailByCartId(Long id);
+    Long deleteCartDetailByCartId(Long id);
 }

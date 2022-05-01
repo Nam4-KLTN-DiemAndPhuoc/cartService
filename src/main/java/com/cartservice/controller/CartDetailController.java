@@ -42,7 +42,7 @@ public class CartDetailController {
     }
 
     @PostMapping("/cart/delete/{id}")
-    public String DeleteAllCartDetailByCartId(@PathVariable Long id){
+    public Long DeleteAllCartDetailByCartId(@PathVariable Long id){
         return cartDetailService.deleteCartDetailByCartId(id);
     }
 
